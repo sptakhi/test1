@@ -1,0 +1,2030 @@
+/*==================================================
+            GALLERY.CSS - PART 1
+            Reset + Background + Navbar + Hero
+==================================================*/
+
+/*=========================
+        RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#08111f;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    min-height:100vh;
+
+}
+
+/*=========================
+    CUSTOM SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff5ea7;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff2d7a;
+
+}
+
+/*=========================
+    ANIMATED BACKGROUND
+=========================*/
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-2;
+
+    background:
+    radial-gradient(circle at top,
+    #223b67 0%,
+    #101b35 35%,
+    #08111f 100%);
+
+}
+
+/*=========================
+        STARS
+=========================*/
+
+.stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(2px 2px at 20px 40px,#ffffff,transparent),
+
+    radial-gradient(2px 2px at 120px 140px,#ffffff,transparent),
+
+    radial-gradient(1px 1px at 260px 70px,#ffffff,transparent),
+
+    radial-gradient(2px 2px at 400px 240px,#ffffff,transparent),
+
+    radial-gradient(2px 2px at 700px 120px,#ffffff,transparent),
+
+    radial-gradient(1px 1px at 850px 300px,#ffffff,transparent);
+
+    background-size:900px 500px;
+
+    opacity:.8;
+
+    animation:twinkle 8s linear infinite;
+
+}
+
+/*=========================
+    FLOATING HEARTS
+=========================*/
+
+.floating-hearts{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.floating-hearts::before,
+
+.floating-hearts::after{
+
+    content:"❤️";
+
+    position:absolute;
+
+    font-size:40px;
+
+    opacity:.15;
+
+    animation:floatHeart 18s linear infinite;
+
+}
+
+.floating-hearts::before{
+
+    left:12%;
+
+}
+
+.floating-hearts::after{
+
+    right:18%;
+
+    animation-delay:8s;
+
+}
+
+/*=========================
+        HEADER
+=========================*/
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/*=========================
+        NAVBAR
+=========================*/
+
+nav{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:30px;
+
+    color:#ffd6ec;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+nav ul li a:hover,
+
+nav ul li a.active{
+
+    color:#ff8dc5;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-6px;
+
+    background:#ff8dc5;
+
+    transition:.35s;
+
+}
+
+nav ul li a:hover::after,
+
+nav ul li a.active::after{
+
+    width:100%;
+
+}
+
+/*=========================
+        HERO
+=========================*/
+
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:90px auto 70px;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:64px;
+
+    color:#ffd6ec;
+
+    margin-bottom:25px;
+
+    text-shadow:
+
+        0 0 25px rgba(255,182,193,.35);
+
+}
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#f3f3f3;
+
+}
+
+/*=========================
+    SECTION TITLES
+=========================*/
+
+section h2{
+
+    font-size:40px;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#ffd6ec;
+
+}
+
+/*=========================
+    GLASS CARD
+=========================*/
+
+.glass{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:25px;
+
+    box-shadow:
+
+        0 10px 35px rgba(0,0,0,.25);
+
+}
+/*==================================================
+            GALLERY.CSS - PART 2
+            Upload + Gallery Cards
+==================================================*/
+
+/*=========================
+        ROMANTIC QUOTE
+=========================*/
+
+.quote{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+.quote h2{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:38px;
+
+    color:#ffd8ee;
+
+    line-height:1.8;
+
+}
+
+/*=========================
+        GALLERY GRID
+=========================*/
+
+.gallery{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:80px auto;
+
+}
+
+#galleryContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+/*=========================
+        PHOTO CARD
+=========================*/
+
+.photo-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:#111827;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    transition:.45s;
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit: contain;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.photo-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/*=========================
+        IMAGE OVERLAY
+=========================*/
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.15),
+
+        rgba(0,0,0,.75)
+
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.photo-card:hover .overlay{
+
+    opacity: 1;
+
+}
+
+.overlay h3{
+
+    font-size:30px;
+
+    color:#ffffff;
+
+    margin-bottom:15px;
+
+}
+
+.overlay p{
+
+    color:#eeeeee;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/*=========================
+        CARD SHINE
+=========================*/
+
+.photo-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-60%;
+
+    width:70px;
+
+    height:350%;
+
+    background:rgba(255,255,255,.18);
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+    z-index:3;
+
+}
+
+.photo-card:hover::before{
+
+    left:160%;
+
+}
+
+/*=========================
+        IMAGE BORDER
+=========================*/
+
+.photo-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    pointer-events:none;
+
+}
+
+/*=========================
+        PHOTO SHADOW
+=========================*/
+
+.photo-card:hover{
+
+    box-shadow:
+
+        0 20px 50px rgba(255,94,167,.25),
+
+        0 0 35px rgba(255,255,255,.12);
+
+}
+
+/*=========================
+        SECTION SPACING
+=========================*/
+
+.gallery{
+
+    padding-bottom:40px;
+
+}
+/*==================================================
+            GALLERY.CSS - PART 3
+            Timeline + Love Section + Footer
+==================================================*/
+
+/*=========================
+        TIMELINE
+=========================*/
+
+.timeline{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:100px auto;
+
+    text-align:center;
+
+}
+
+.timeline-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.timeline-item{
+
+    padding:35px 25px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.4s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.timeline-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(255,94,167,.25);
+
+}
+
+.timeline-item span{
+
+    font-size:50px;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}
+
+.timeline-item h3{
+
+    margin-bottom:15px;
+
+    color:#ffd7ea;
+
+}
+
+.timeline-item p{
+
+    color:#eeeeee;
+
+    line-height:1.8;
+
+}
+
+/*=========================
+        LOVE SECTION
+=========================*/
+
+.love-section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:100px auto;
+
+}
+
+.love-grid{
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.love-card{
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.4s;
+
+}
+
+.love-card:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+    box-shadow:
+
+        0 15px 40px rgba(255,94,167,.3);
+
+}
+
+.love-card{
+
+    font-size:48px;
+
+}
+
+.love-card h3{
+
+    margin:20px 0;
+
+    color:#ffd7ea;
+
+    font-size:24px;
+
+}
+
+.love-card p{
+
+    color:#eeeeee;
+
+    line-height:1.8;
+
+}
+
+/*=========================
+        ENDING SECTION
+=========================*/
+
+.ending-section{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:100px auto;
+
+}
+
+.ending-content{
+
+    padding:60px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+.ending-content h2{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:45px;
+
+    color:#ffd8ee;
+
+    margin-bottom:30px;
+
+}
+
+.ending-content p{
+
+    font-size:19px;
+
+    line-height:2;
+
+    color:#f2f2f2;
+
+}
+
+/*=========================
+        BACK BUTTON
+=========================*/
+
+.back-home{
+
+    text-align:center;
+
+    margin:70px 0;
+
+}
+
+.home-btn{
+
+    display:inline-block;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(135deg,#ff5ea7,#ff2d7a);
+
+    transition:.4s;
+
+    box-shadow:0 12px 35px rgba(255,94,167,.35);
+
+}
+
+.home-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 45px rgba(255,94,167,.45);
+
+}
+
+/*=========================
+        FLOATING HEARTS
+=========================*/
+
+.floating-heart-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:5;
+
+}
+
+.floating-heart-container span{
+
+    position:absolute;
+
+    font-size:28px;
+
+    opacity:.18;
+
+    animation:floatHeart 18s linear infinite;
+
+}
+
+.floating-heart-container span:nth-child(1){
+
+    left:8%;
+    animation-delay:0s;
+
+}
+
+.floating-heart-container span:nth-child(2){
+
+    left:20%;
+    animation-delay:3s;
+
+}
+
+.floating-heart-container span:nth-child(3){
+
+    left:38%;
+    animation-delay:6s;
+
+}
+
+.floating-heart-container span:nth-child(4){
+
+    left:55%;
+    animation-delay:9s;
+
+}
+
+.floating-heart-container span:nth-child(5){
+
+    left:72%;
+    animation-delay:12s;
+
+}
+
+.floating-heart-container span:nth-child(6){
+
+    left:82%;
+    animation-delay:15s;
+
+}
+
+.floating-heart-container span:nth-child(7){
+
+    left:92%;
+    animation-delay:18s;
+
+}
+
+/*=========================
+        FOOTER
+=========================*/
+
+footer{
+
+    margin-top:80px;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(20px);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h2{
+
+    font-family:'Pacifico',cursive;
+
+    color:#ffd8ee;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#eeeeee;
+
+    line-height:2;
+
+    margin-bottom:10px;
+
+}
+/*==================================================
+            GALLERY.CSS - PART 4A
+            Lightbox + Music Button
+==================================================*/
+
+
+/*=========================
+        LIGHTBOX
+=========================*/
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    backdrop-filter:blur(15px);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:5000;
+
+    padding:40px;
+
+}
+
+
+#lightboxImage{
+
+    max-width:90%;
+
+    max-height:80vh;
+
+    border-radius:25px;
+
+    object-fit:contain;
+
+    box-shadow:
+
+        0 0 50px rgba(255,255,255,.25),
+
+        0 0 80px rgba(255,94,167,.3);
+
+    animation:lightboxZoom .5s ease;
+
+}
+
+
+/*=========================
+        LIGHTBOX CLOSE
+=========================*/
+
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:35px;
+
+    right:50px;
+
+    font-size:55px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+#closeLightbox:hover{
+
+    color:#ff8dc5;
+
+    transform:rotate(90deg);
+
+}
+
+
+/*=========================
+        LIGHTBOX CAPTION
+=========================*/
+
+
+#lightboxCaption{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:24px;
+
+    text-align:center;
+
+    max-width:800px;
+
+}
+
+
+/*=========================
+        IMAGE CURSOR
+=========================*/
+
+
+.photo-card img{
+
+    cursor:pointer;
+
+}
+
+/*=========================
+        IMAGE OPEN EFFECT
+=========================*/
+
+
+.lightbox-active{
+
+    overflow:hidden;
+
+}
+
+
+/*=========================
+        GLASS EFFECT FOR
+        SPECIAL SECTIONS
+=========================*/
+
+
+.upload-section,
+.timeline-item,
+.love-card,
+.ending-content{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.upload-section::before,
+.timeline-item::before,
+.love-card::before,
+.ending-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-50%;
+
+    width:80px;
+
+    height:400%;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+
+.upload-section:hover::before,
+.timeline-item:hover::before,
+.love-card:hover::before,
+.ending-content:hover::before{
+
+    left:150%;
+
+}
+/*==================================================
+            GALLERY.CSS - PART 4B
+            Animations & Effects
+==================================================*/
+
+
+/*=========================
+        STAR TWINKLE
+=========================*/
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.4;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        opacity:.4;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================
+        FLOATING HEARTS
+=========================*/
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:
+
+        translateY(110vh)
+
+        rotate(0deg)
+
+        scale(.8);
+
+        opacity:0;
+
+    }
+
+
+    15%{
+
+        opacity:.25;
+
+    }
+
+
+    50%{
+
+        transform:
+
+        translateY(50vh)
+
+        rotate(180deg)
+
+        scale(1);
+
+    }
+
+
+    100%{
+
+        transform:
+
+        translateY(-20vh)
+
+        rotate(360deg)
+
+        scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*=========================
+        LIGHTBOX ZOOM
+=========================*/
+
+@keyframes lightboxZoom{
+
+    from{
+
+        transform:
+
+        scale(.7);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:
+
+        scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================
+        FADE IN
+=========================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+/*=========================
+        FLOAT UP
+=========================*/
+
+@keyframes floatUp{
+
+    0%{
+
+        transform:
+
+        translateY(50px);
+
+        opacity:0;
+
+    }
+
+
+    100%{
+
+        transform:
+
+        translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================
+        HEART PULSE
+=========================*/
+
+@keyframes heartPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================
+        MUSIC BUTTON GLOW
+=========================*/
+
+@keyframes musicGlow{
+
+    0%{
+
+        box-shadow:
+
+        0 0 10px rgba(255,94,167,.3);
+
+    }
+
+
+    50%{
+
+        box-shadow:
+
+        0 0 35px rgba(255,94,167,.8);
+
+    }
+
+
+    100%{
+
+        box-shadow:
+
+        0 0 10px rgba(255,94,167,.3);
+
+    }
+
+}
+
+
+#musicButton{
+
+    animation:
+
+    musicGlow 2s infinite;
+
+}
+
+
+/*=========================
+        CARD FLOAT
+=========================*/
+
+@keyframes cardFloat{
+
+    0%{
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:
+
+        translateY(-8px);
+
+    }
+
+
+    100%{
+
+        transform:
+
+        translateY(0);
+
+    }
+
+}
+
+
+/*=========================
+        GLOW TEXT
+=========================*/
+
+@keyframes textGlow{
+
+    0%{
+
+        text-shadow:
+
+        0 0 5px rgba(255,216,238,.3);
+
+    }
+
+
+    50%{
+
+        text-shadow:
+
+        0 0 25px rgba(255,94,167,.8);
+
+    }
+
+
+    100%{
+
+        text-shadow:
+
+        0 0 5px rgba(255,216,238,.3);
+
+    }
+
+}
+
+
+/*=========================
+        APPLY ANIMATIONS
+=========================*/
+
+
+.hero h1{
+
+    animation:
+
+    textGlow 3s infinite;
+
+}
+
+
+.photo-card{
+
+    animation:
+
+    fadeIn .8s ease forwards;
+
+}
+
+
+.timeline-item{
+
+    animation:
+
+    floatUp .8s ease forwards;
+
+}
+
+
+.love-card{
+
+    animation:
+
+    cardFloat 5s infinite ease-in-out;
+
+}
+
+
+/*=========================
+        SMOOTH PAGE ENTRY
+=========================*/
+
+body{
+
+    animation:
+
+    fadeIn 1.2s ease;
+
+}
+/*==================================================
+            GALLERY.CSS - PART 4C
+            Responsive Design
+==================================================*/
+
+
+/*==================================================
+            TABLET DEVICES
+==================================================*/
+
+@media(max-width:1024px){
+
+
+    nav{
+
+        width:92%;
+
+    }
+
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+
+    nav ul{
+
+        gap:18px;
+
+    }
+
+
+    nav ul li a{
+
+        font-size:15px;
+
+    }
+
+
+    .hero{
+
+        margin-top:70px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:50px;
+
+    }
+
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+
+    .upload-section{
+
+        padding:45px 30px;
+
+    }
+
+
+    section h2{
+
+        font-size:34px;
+
+    }
+
+
+    #galleryContainer{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+
+    .photo-card img{
+
+        height:320px;
+
+    }
+
+
+    .ending-content{
+
+        padding:45px 30px;
+
+    }
+
+
+}
+
+
+
+/*==================================================
+            MOBILE DEVICES
+==================================================*/
+
+
+@media(max-width:768px){
+
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+
+
+    /*------------ NAVBAR ------------*/
+
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px 0;
+
+    }
+
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+
+    nav ul li a{
+
+        font-size:14px;
+
+    }
+
+
+
+    /*------------ HERO ------------*/
+
+
+    .hero{
+
+        width:92%;
+
+        margin:50px auto;
+
+    }
+
+
+    .hero h1{
+
+        font-size:38px;
+
+        line-height:1.4;
+
+    }
+
+
+    .hero p{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+    }
+
+
+
+    /*------------ TITLES ------------*/
+
+
+    section h2{
+
+        font-size:30px;
+
+    }
+
+
+
+    /*------------ UPLOAD ------------*/
+
+
+    .upload-section{
+
+        padding:35px 20px;
+
+        border-radius:22px;
+
+    }
+
+
+    .upload-section p{
+
+        font-size:15px;
+
+    }
+
+
+    .upload-box label{
+
+        padding:15px 25px;
+
+        font-size:15px;
+
+    }
+
+
+
+    /*------------ GALLERY ------------*/
+
+
+    .gallery{
+
+        width:92%;
+
+    }
+
+
+    #galleryContainer{
+
+        grid-template-columns:
+
+        1fr;
+
+    }
+
+
+    .photo-card img{
+
+        height:380px;
+
+    }
+
+
+    .overlay h3{
+
+        font-size:24px;
+
+    }
+
+
+    .overlay p{
+
+        font-size:15px;
+
+    }
+
+
+
+    /*------------ TIMELINE ------------*/
+
+
+    .timeline-container{
+
+        grid-template-columns:
+
+        1fr;
+
+    }
+
+
+    .timeline-item{
+
+        padding:30px 20px;
+
+    }
+
+
+
+    /*------------ LOVE CARDS ------------*/
+
+
+    .love-grid{
+
+        grid-template-columns:
+
+        1fr;
+
+    }
+
+
+    .love-card{
+
+        padding:30px 20px;
+
+    }
+
+
+
+    /*------------ ENDING ------------*/
+
+
+    .ending-content h2{
+
+        font-size:32px;
+
+    }
+
+
+    .ending-content p{
+
+        font-size:16px;
+
+    }
+
+
+
+    /*------------ LIGHTBOX ------------*/
+
+
+    #lightbox{
+
+        padding:20px;
+
+    }
+
+
+    #lightboxImage{
+
+        max-width:95%;
+
+        max-height:70vh;
+
+    }
+
+
+    #closeLightbox{
+
+        top:20px;
+
+        right:25px;
+
+        font-size:45px;
+
+    }
+
+
+
+    /*------------ MUSIC BUTTON ------------*/
+
+
+    #musicButton{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:24px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+
+
+    footer h2{
+
+        font-size:28px;
+
+    }
+
+
+    footer p{
+
+        font-size:14px;
+
+    }
+
+
+}
+
+
+
+/*==================================================
+            SMALL PHONES
+==================================================*/
+
+
+@media(max-width:420px){
+
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
+
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+
+    nav ul{
+
+        gap:10px;
+
+    }
+
+
+    nav ul li a{
+
+        font-size:12px;
+
+    }
+
+
+    .photo-card img{
+
+        height:300px;
+
+    }
+
+
+    .quote h2{
+
+        font-size:28px;
+
+    }
+
+
+    .ending-content{
+
+        padding:30px 18px;
+
+    }
+
+
+}
+
+
+
+/*==================================================
+        ACCESSIBILITY
+==================================================*/
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+    *{
+
+        animation-duration:0.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+
+}
