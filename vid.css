@@ -1,0 +1,1648 @@
+/*==================================================
+            VIDEOS.CSS - PART 1
+            Reset + Background + Navbar + Hero
+==================================================*/
+
+
+/*=========================
+        RESET
+=========================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#08111f;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/*=========================
+        BACKGROUND
+=========================*/
+
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-5;
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        #263d72,
+        #111b35 40%,
+        #08111f 90%
+    );
+
+}
+
+
+
+/*=========================
+        STARS
+=========================*/
+
+
+.stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(
+        2px 2px at 30px 50px,
+        white,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 200px 150px,
+        white,
+        transparent
+    ),
+
+    radial-gradient(
+        1px 1px at 400px 100px,
+        white,
+        transparent
+    );
+
+
+    background-size:
+    600px 400px;
+
+
+    animation:
+    twinkle 8s infinite;
+
+}
+
+
+
+/*=========================
+        HEADER
+=========================*/
+
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+
+    rgba(0,0,0,.35);
+
+    backdrop-filter:
+
+    blur(15px);
+
+}
+
+
+
+/*=========================
+        NAVBAR
+=========================*/
+
+
+nav{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:18px 0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.logo{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:30px;
+
+    color:#ffd6ec;
+
+}
+
+
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:28px;
+
+}
+
+
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:16px;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+
+
+nav ul li a:hover,
+
+nav ul li a.active{
+
+    color:#ff8dc5;
+
+}
+
+
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ff8dc5;
+
+    transition:.3s;
+
+}
+
+
+
+nav ul li a:hover::after,
+
+nav ul li a.active::after{
+
+    width:100%;
+
+}
+
+
+
+/*=========================
+        HERO
+=========================*/
+
+
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:90px auto;
+
+    text-align:center;
+
+}
+
+
+
+.hero h1{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:60px;
+
+    color:#ffd6ec;
+
+    margin-bottom:25px;
+
+    text-shadow:
+
+    0 0 25px rgba(255,182,193,.4);
+
+}
+
+
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#eeeeee;
+
+}
+
+
+
+/*=========================
+        SECTION TITLES
+=========================*/
+
+
+section h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#ffd6ec;
+
+    margin-bottom:35px;
+
+}
+
+/*==================================================
+            VIDEOS.CSS - PART 2
+            Video Cards + Timeline Sections
+==================================================*/
+
+
+/*=========================
+        QUOTE SECTION
+=========================*/
+
+
+.quote{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+
+
+.quote h2{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:38px;
+
+    line-height:1.8;
+
+    color:#ffd8ee;
+
+}
+
+
+
+
+
+/*=========================
+        VIDEO GALLERY
+=========================*/
+
+
+.video-gallery{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:100px auto;
+
+}
+
+
+
+#videoContainer{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+/*=========================
+        VIDEO CARD
+=========================*/
+
+
+.video-card{
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:
+
+    blur(18px);
+
+
+
+    border-radius:28px;
+
+
+    overflow:hidden;
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.3);
+
+
+
+    transition:.45s;
+
+
+
+    position:relative;
+
+
+}
+
+
+
+.video-card:hover{
+
+
+    transform:
+
+    translateY(-10px);
+
+
+
+    box-shadow:
+
+
+    0 25px 55px rgba(255,94,167,.3);
+
+
+}
+
+
+
+
+
+.video-card video{
+
+
+    width:100%;
+
+
+    height:350px;
+
+
+    object-fit:cover;
+
+
+    display:block;
+
+
+}
+
+
+
+
+
+.video-card video::-webkit-media-controls-panel{
+
+
+    background:
+
+    rgba(0,0,0,.6);
+
+
+}
+
+
+
+
+
+/*=========================
+        VIDEO INFO
+=========================*/
+
+
+.video-info{
+
+
+    padding:30px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.video-info h3{
+
+
+    color:#ffd7ea;
+
+
+    font-size:24px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.video-info p{
+
+
+    color:#eeeeee;
+
+
+    line-height:1.8;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+/*=========================
+        VIDEO CARD SHINE
+=========================*/
+
+
+.video-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:-150%;
+
+
+    left:-50%;
+
+
+    width:70px;
+
+
+    height:400%;
+
+
+    background:
+
+    rgba(255,255,255,.18);
+
+
+
+    transform:
+
+    rotate(25deg);
+
+
+
+    transition:1s;
+
+
+
+}
+
+
+
+.video-card:hover::before{
+
+
+    left:160%;
+
+
+}
+
+
+
+
+
+/*=========================
+        UPLOADED VIDEOS
+=========================*/
+
+
+.uploaded-videos{
+
+
+    width:92%;
+
+
+    max-width:1400px;
+
+
+    margin:100px auto;
+
+
+}
+
+
+
+#uploadedVideoContainer{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(320px,1fr));
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+/*=========================
+        MEMORY MESSAGE
+=========================*/
+
+
+.memory-message{
+
+
+    width:90%;
+
+
+    max-width:1100px;
+
+
+    margin:100px auto;
+
+
+}
+
+
+
+.message-box{
+
+
+    padding:60px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.message-box h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+    color:#ffd8ee;
+
+
+    font-size:42px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.message-box p{
+
+
+    font-size:19px;
+
+
+    color:#eeeeee;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+/*=========================
+        VIDEO TIMELINE
+=========================*/
+
+
+.video-timeline{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:100px auto;
+
+
+}
+
+
+
+
+.timeline-wrapper{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+.timeline-card{
+
+
+    padding:35px 25px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+    blur(18px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+.timeline-card:hover{
+
+
+    transform:
+
+    translateY(-10px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(255,94,167,.3);
+
+
+}
+
+
+
+
+
+.timeline-card .icon{
+
+
+    font-size:50px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.timeline-card h3{
+
+
+    color:#ffd7ea;
+
+
+    font-size:25px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.timeline-card p{
+
+
+    color:#eeeeee;
+
+
+    line-height:1.8;
+
+
+}
+/*==================================================
+            VIDEOS.CSS - PART 3
+            Popup + Music + Footer + Responsive
+==================================================*/
+
+
+/*=========================
+        VIDEO LIGHTBOX
+=========================*/
+
+
+#videoLightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    rgba(0,0,0,.85);
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+    z-index:5000;
+
+
+    padding:30px;
+
+}
+
+
+
+#popupVideo{
+
+
+    width:90%;
+
+
+    max-width:1000px;
+
+
+    max-height:80vh;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 0 60px rgba(255,94,167,.5);
+
+
+}
+
+
+
+#closeVideo{
+
+
+    position:absolute;
+
+
+    top:30px;
+
+
+    right:50px;
+
+
+    color:white;
+
+
+    font-size:55px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+#closeVideo:hover{
+
+
+    color:#ff8dc5;
+
+
+    transform:rotate(90deg);
+
+
+}
+
+
+
+
+
+/*=========================
+        ENDING SECTION
+=========================*/
+
+
+.ending-section{
+
+
+    width:90%;
+
+
+    max-width:1100px;
+
+
+    margin:100px auto;
+
+
+}
+
+
+
+.ending-content{
+
+
+    padding:60px;
+
+
+    text-align:center;
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.ending-content h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+    color:#ffd8ee;
+
+
+    font-size:45px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.ending-content p{
+
+
+    color:#eeeeee;
+
+
+    font-size:19px;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+/*=========================
+        BACK HOME BUTTON
+=========================*/
+
+
+.back-home{
+
+
+    text-align:center;
+
+
+    margin:70px 0;
+
+
+}
+
+
+
+.home-btn{
+
+
+    display:inline-block;
+
+
+    padding:18px 45px;
+
+
+    border-radius:50px;
+
+
+    text-decoration:none;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff5ea7,
+
+    #ff2d7a
+
+    );
+
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.home-btn:hover{
+
+
+    transform:
+
+    translateY(-6px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(255,94,167,.45);
+
+
+}
+
+
+
+
+
+/*=========================
+        MUSIC BUTTON
+=========================*/
+
+
+#musicButton{
+
+
+    position:fixed;
+
+
+    right:30px;
+
+
+    bottom:30px;
+
+
+    width:70px;
+
+
+    height:70px;
+
+
+    border-radius:50%;
+
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    font-size:30px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff5ea7,
+
+    #ff2d7a
+
+    );
+
+
+
+    color:white;
+
+
+    z-index:3000;
+
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(255,94,167,.4);
+
+
+
+    animation:
+
+    musicPulse 2s infinite;
+
+
+}
+
+
+
+#musicButton:hover{
+
+
+    transform:scale(1.15);
+
+
+}
+
+
+
+
+
+/*=========================
+        FLOATING HEARTS
+=========================*/
+
+
+.floating-heart-container{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    pointer-events:none;
+
+
+    overflow:hidden;
+
+
+    z-index:20;
+
+
+}
+
+
+
+.floating-heart-container span{
+
+
+    position:absolute;
+
+
+    bottom:-50px;
+
+
+    font-size:30px;
+
+
+    opacity:.25;
+
+
+    animation:
+
+    heartFloat 15s linear infinite;
+
+
+}
+
+
+
+
+
+/*=========================
+        FOOTER
+=========================*/
+
+
+footer{
+
+
+    margin-top:80px;
+
+
+    padding:50px 20px;
+
+
+    text-align:center;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+
+    border-top:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+footer h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+    color:#ffd8ee;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+footer p{
+
+
+    color:#eeeeee;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+/*=========================
+        ANIMATIONS
+=========================*/
+
+
+@keyframes heartFloat{
+
+
+    from{
+
+
+        transform:
+
+        translateY(0)
+
+        rotate(0);
+
+
+        opacity:.3;
+
+
+    }
+
+
+
+    to{
+
+
+        transform:
+
+        translateY(-120vh)
+
+        rotate(360deg);
+
+
+
+        opacity:0;
+
+
+    }
+
+
+}
+
+
+
+@keyframes musicPulse{
+
+
+    0%{
+
+
+        box-shadow:
+
+        0 0 10px rgba(255,94,167,.4);
+
+
+    }
+
+
+
+    50%{
+
+
+        box-shadow:
+
+        0 0 40px rgba(255,94,167,.8);
+
+
+    }
+
+
+
+    100%{
+
+
+        box-shadow:
+
+        0 0 10px rgba(255,94,167,.4);
+
+
+    }
+
+
+}
+
+
+
+
+
+/*=========================
+        RESPONSIVE DESIGN
+=========================*/
+
+
+@media(max-width:768px){
+
+
+
+nav{
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+nav ul{
+
+
+    flex-wrap:wrap;
+
+
+    justify-content:center;
+
+
+}
+
+
+
+.hero h1{
+
+
+    font-size:38px;
+
+
+}
+
+
+
+.hero p{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.upload-section{
+
+
+    padding:35px 20px;
+
+
+}
+
+
+
+#videoContainer,
+
+
+#uploadedVideoContainer{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.video-card video{
+
+
+    height:300px;
+
+
+}
+
+
+
+.message-box,
+
+
+.ending-content{
+
+
+    padding:35px 20px;
+
+
+}
+
+
+
+.message-box h2,
+
+
+.ending-content h2{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+#musicButton{
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+#closeVideo{
+
+
+    right:25px;
+
+
+    font-size:45px;
+
+
+}
+
+
+}
+
+
+
+@media(max-width:420px){
+
+
+
+.logo{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.hero h1{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+section h2{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+.video-card video{
+
+
+    height:250px;
+
+
+}
+
+
+
+}
