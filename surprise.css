@@ -1,0 +1,2024 @@
+/*==================================================
+            SURPRISE.CSS - PART 1
+            Background + Gift Reveal
+==================================================*/
+
+
+/*=========================
+        RESET
+=========================*/
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+
+    font-family:'Poppins',sans-serif;
+
+
+    background:#08111f;
+
+
+    color:white;
+
+
+    overflow-x:hidden;
+
+
+}
+
+
+
+
+
+/*=========================
+        BACKGROUND
+=========================*/
+
+
+.background{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    z-index:-5;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle at top,
+
+    #394d85,
+
+    #111b35 45%,
+
+    #08111f
+
+    );
+
+
+}
+
+
+
+
+
+/*=========================
+        STARS
+=========================*/
+
+
+.stars{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    background-image:
+
+
+
+    radial-gradient(
+
+    2px 2px at 40px 80px,
+
+    white,
+
+    transparent
+
+    ),
+
+
+
+    radial-gradient(
+
+    2px 2px at 200px 180px,
+
+    white,
+
+    transparent
+
+    ),
+
+
+
+    radial-gradient(
+
+    1px 1px at 400px 120px,
+
+    white,
+
+    transparent
+
+    );
+
+
+
+    background-size:
+
+    600px 500px;
+
+
+
+    animation:
+
+    starMove 10s infinite;
+
+
+}
+
+
+
+@keyframes starMove{
+
+
+    0%{
+
+        opacity:.4;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        opacity:.4;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        MUSIC BUTTON
+=========================*/
+
+
+#musicButton{
+
+
+    position:fixed;
+
+
+    right:30px;
+
+
+    bottom:30px;
+
+
+    width:70px;
+
+
+    height:70px;
+
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+
+    cursor:pointer;
+
+
+
+    font-size:30px;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff5ea7,
+
+    #ff2d7a
+
+    );
+
+
+
+    z-index:3000;
+
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(255,94,167,.4);
+
+
+
+    animation:
+
+    musicPulse 2s infinite;
+
+
+}
+
+
+
+@keyframes musicPulse{
+
+
+    50%{
+
+
+        transform:scale(1.1);
+
+
+        box-shadow:
+
+        0 0 45px #ff5ea7;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        HERO SECTION
+=========================*/
+
+
+.surprise-hero{
+
+
+    min-height:100vh;
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    text-align:center;
+
+
+}
+
+
+
+.surprise-hero h1{
+
+
+    font-family:'Pacifico',cursive;
+
+
+    font-size:65px;
+
+
+
+    color:#ffd8ec;
+
+
+
+    text-shadow:
+
+
+    0 0 30px rgba(255,94,167,.5);
+
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.surprise-hero p{
+
+
+    font-size:22px;
+
+
+    color:#eee;
+
+
+
+    margin-bottom:50px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        GIFT BOX
+=========================*/
+
+
+.gift-container{
+
+
+    perspective:1000px;
+
+
+    margin:40px;
+
+
+}
+
+
+
+
+
+.gift-box{
+
+
+    width:220px;
+
+
+    height:200px;
+
+
+    position:relative;
+
+
+
+    cursor:pointer;
+
+
+
+    transform-style:preserve-3d;
+
+
+
+    transition:1s;
+
+
+}
+
+
+
+
+
+.gift-body{
+
+
+    position:absolute;
+
+
+    bottom:0;
+
+
+    width:100%;
+
+
+    height:150px;
+
+
+
+    border-radius:10px;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    font-size:90px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff5ea7,
+
+    #ff2d7a
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 30px 60px rgba(255,94,167,.5);
+
+
+}
+
+
+
+
+
+.gift-lid{
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    width:100%;
+
+
+    height:50px;
+
+
+
+    border-radius:10px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff8dc5,
+
+    #ff4f91
+
+    );
+
+
+
+    transform-origin:bottom;
+
+
+
+    transition:1s;
+
+
+}
+
+
+
+
+
+.gift-box:hover{
+
+
+    transform:
+
+    rotateY(15deg);
+
+
+}
+/*==================================================
+            SURPRISE.CSS - PART 2
+            Message + Cards + Final Sections
+==================================================*/
+
+
+/*=========================
+        OPEN BUTTON
+=========================*/
+
+
+#openGift{
+
+
+    padding:
+
+    18px 50px;
+
+
+
+    border:none;
+
+
+
+    border-radius:50px;
+
+
+
+    cursor:pointer;
+
+
+
+    font-size:18px;
+
+
+
+    font-weight:600;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff5ea7,
+
+    #ff2d7a
+
+    );
+
+
+
+    box-shadow:
+
+
+    0 20px 40px rgba(255,94,167,.35);
+
+
+
+    transition:.4s;
+
+
+}
+
+
+
+#openGift:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+
+    box-shadow:
+
+
+    0 30px 60px rgba(255,94,167,.55);
+
+
+}
+
+
+
+
+
+
+/*=========================
+        BIRTHDAY MESSAGE
+=========================*/
+
+
+.birthday-message{
+
+
+    width:90%;
+
+
+    max-width:1100px;
+
+
+
+    margin:120px auto;
+
+
+
+    opacity:0;
+
+
+
+    transform:
+
+    translateY(50px);
+
+
+
+    transition:
+
+    1s ease;
+
+
+}
+
+
+
+.birthday-message.show{
+
+
+    opacity:1;
+
+
+
+    transform:
+
+    translateY(0);
+
+
+}
+
+
+
+
+
+.message-card{
+
+
+    padding:70px 60px;
+
+
+
+    text-align:center;
+
+
+
+    border-radius:35px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+
+    blur(20px);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    box-shadow:
+
+
+    0 20px 50px rgba(0,0,0,.3);
+
+
+}
+
+
+
+.message-card h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+
+    color:#ffd8ec;
+
+
+
+    font-size:45px;
+
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+.message-card p{
+
+
+    font-size:19px;
+
+
+
+    line-height:2;
+
+
+
+    color:#eeeeee;
+
+
+}
+
+
+
+
+
+
+
+
+/*=========================
+        HIGHLIGHTS SECTION
+=========================*/
+
+
+.memory-highlights{
+
+
+    width:90%;
+
+
+
+    max-width:1300px;
+
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+.memory-highlights h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+
+    font-size:45px;
+
+
+
+    text-align:center;
+
+
+
+    color:#ffd8ec;
+
+
+
+    margin-bottom:50px;
+
+
+}
+
+
+
+
+
+.highlight-grid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+.highlight-card{
+
+
+    padding:40px 30px;
+
+
+
+    text-align:center;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+
+    blur(15px);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+.highlight-card:hover{
+
+
+    transform:
+
+    translateY(-12px);
+
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(255,94,167,.35);
+
+
+}
+
+
+
+
+
+.highlight-card .icon{
+
+
+    font-size:55px;
+
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.highlight-card h3{
+
+
+    font-size:26px;
+
+
+
+    color:#ffd8ec;
+
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.highlight-card p{
+
+
+    color:#eeeeee;
+
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        SPECIAL MESSAGE
+=========================*/
+
+
+.special-message{
+
+
+    width:90%;
+
+
+
+    max-width:1100px;
+
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+.special-box{
+
+
+    padding:60px;
+
+
+
+    text-align:center;
+
+
+
+    border-radius:35px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:
+
+
+    blur(20px);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+}
+
+
+
+.special-box h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+
+    color:#ffd8ec;
+
+
+
+    font-size:45px;
+
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.special-box p{
+
+
+    font-size:19px;
+
+
+
+    color:#eee;
+
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        FINAL SURPRISE
+=========================*/
+
+
+.final-surprise{
+
+
+    width:90%;
+
+
+
+    max-width:1100px;
+
+
+
+    margin:120px auto;
+
+
+}
+
+
+
+
+.final-box{
+
+
+    padding:70px 50px;
+
+
+
+    text-align:center;
+
+
+
+    border-radius:40px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    rgba(255,94,167,.2),
+
+    rgba(255,255,255,.08)
+
+    );
+
+
+
+    backdrop-filter:
+
+
+    blur(20px);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+}
+
+
+
+
+
+.final-box h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+
+    font-size:50px;
+
+
+
+    color:#ffd8ec;
+
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+.final-box p{
+
+
+    font-size:20px;
+
+
+
+    line-height:2;
+
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+
+.big-heart{
+
+
+    margin-top:40px;
+
+
+
+    font-size:120px;
+
+
+
+    animation:
+
+
+    heartBeat 1.5s infinite;
+
+
+}
+
+
+
+@keyframes heartBeat{
+
+
+    50%{
+
+
+        transform:scale(1.2);
+
+
+    }
+
+
+}
+/*==================================================
+            SURPRISE.CSS - PART 3
+            Decorations + Footer + Responsive
+==================================================*/
+
+
+/*=========================
+        FLOATING HEARTS
+=========================*/
+
+
+.floating-heart-container{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    overflow:hidden;
+
+
+    pointer-events:none;
+
+
+    z-index:20;
+
+
+}
+
+
+
+
+
+.floating-heart-container span{
+
+
+    position:absolute;
+
+
+    bottom:-50px;
+
+
+
+    font-size:35px;
+
+
+
+    opacity:.3;
+
+
+
+    animation:
+
+
+    floatHeart 15s linear infinite;
+
+
+}
+
+
+
+
+
+.floating-heart-container span:nth-child(1){
+
+
+    left:10%;
+
+
+    animation-delay:0s;
+
+
+}
+
+
+
+.floating-heart-container span:nth-child(2){
+
+
+    left:30%;
+
+
+    animation-delay:3s;
+
+
+}
+
+
+
+.floating-heart-container span:nth-child(3){
+
+
+    left:50%;
+
+
+    animation-delay:5s;
+
+
+}
+
+
+
+.floating-heart-container span:nth-child(4){
+
+
+    left:70%;
+
+
+    animation-delay:2s;
+
+
+}
+
+
+
+.floating-heart-container span:nth-child(5){
+
+
+    left:85%;
+
+
+    animation-delay:7s;
+
+
+}
+
+
+
+
+
+@keyframes floatHeart{
+
+
+    from{
+
+
+        transform:
+
+
+        translateY(0)
+
+        rotate(0deg);
+
+
+
+        opacity:.4;
+
+
+    }
+
+
+
+    to{
+
+
+        transform:
+
+
+        translateY(-120vh)
+
+        rotate(360deg);
+
+
+
+        opacity:0;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        CONFETTI
+=========================*/
+
+
+#confetti-container{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    pointer-events:none;
+
+
+    overflow:hidden;
+
+
+    z-index:500;
+
+
+}
+
+
+
+
+
+.confetti{
+
+
+    position:absolute;
+
+
+
+    width:12px;
+
+
+
+    height:25px;
+
+
+
+    top:-20px;
+
+
+
+    animation:
+
+
+    confettiFall 5s linear forwards;
+
+
+}
+
+
+
+@keyframes confettiFall{
+
+
+    from{
+
+
+        transform:
+
+
+        translateY(0)
+
+        rotate(0deg);
+
+
+
+        opacity:1;
+
+
+    }
+
+
+
+    to{
+
+
+        transform:
+
+
+        translateY(110vh)
+
+        rotate(720deg);
+
+
+
+        opacity:0;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        NAVIGATION BUTTONS
+=========================*/
+
+
+.navigation-section{
+
+
+    width:90%;
+
+
+    margin:100px auto;
+
+
+
+    display:flex;
+
+
+
+    justify-content:center;
+
+
+
+    flex-wrap:wrap;
+
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.home-btn{
+
+
+    text-decoration:none;
+
+
+
+    color:white;
+
+
+
+    padding:
+
+
+    18px 40px;
+
+
+
+    border-radius:50px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #ff5ea7,
+
+    #ff2d7a
+
+    );
+
+
+
+    font-weight:600;
+
+
+
+    transition:.4s;
+
+
+
+}
+
+
+
+.home-btn:hover{
+
+
+    transform:
+
+
+    translateY(-8px);
+
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(255,94,167,.5);
+
+
+}
+
+
+
+
+
+
+
+
+/*=========================
+        FOOTER
+=========================*/
+
+
+footer{
+
+
+    margin-top:100px;
+
+
+
+    padding:50px 20px;
+
+
+
+    text-align:center;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    backdrop-filter:
+
+
+    blur(15px);
+
+
+
+    border-top:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+}
+
+
+
+
+
+footer h2{
+
+
+    font-family:'Pacifico',cursive;
+
+
+
+    color:#ffd8ec;
+
+
+
+    font-size:35px;
+
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+footer p{
+
+
+    color:#eee;
+
+
+
+    line-height:2;
+
+
+
+}
+
+
+
+
+
+
+
+/*=========================
+        GIFT OPEN ANIMATION
+=========================*/
+
+
+.gift-open .gift-lid{
+
+
+    transform:
+
+
+    rotateX(120deg)
+
+    translateY(-40px);
+
+
+}
+
+
+
+.gift-open{
+
+
+    animation:
+
+
+    giftShake .6s;
+
+
+}
+
+
+
+
+
+@keyframes giftShake{
+
+
+    25%{
+
+
+        transform:rotate(5deg);
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:rotate(-5deg);
+
+
+    }
+
+
+
+    75%{
+
+
+        transform:rotate(3deg);
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/*=========================
+        RESPONSIVE DESIGN
+=========================*/
+
+
+@media(max-width:768px){
+
+
+
+.surprise-hero h1{
+
+
+    font-size:40px;
+
+
+}
+
+
+
+.surprise-hero p{
+
+
+    font-size:17px;
+
+
+}
+
+
+
+.gift-box{
+
+
+    width:170px;
+
+
+    height:160px;
+
+
+}
+
+
+
+.gift-body{
+
+
+    height:120px;
+
+
+    font-size:70px;
+
+
+}
+
+
+
+.message-card,
+
+
+.special-box,
+
+
+.final-box{
+
+
+    padding:40px 20px;
+
+
+}
+
+
+
+.message-card h2,
+
+
+.special-box h2{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.final-box h2{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.final-box p,
+
+
+.message-card p,
+
+
+.special-box p{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.big-heart{
+
+
+    font-size:80px;
+
+
+}
+
+
+
+.navigation-section{
+
+
+    flex-direction:column;
+
+
+
+    align-items:center;
+
+
+}
+
+
+
+.home-btn{
+
+
+    width:80%;
+
+
+
+    text-align:center;
+
+
+}
+
+
+
+#musicButton{
+
+
+    width:55px;
+
+
+
+    height:55px;
+
+
+
+    font-size:22px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:420px){
+
+
+
+.surprise-hero h1{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+section h2{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+.gift-box{
+
+
+    width:140px;
+
+
+}
+
+
+
+.big-heart{
+
+
+    font-size:60px;
+
+
+}
+
+
+
+}
